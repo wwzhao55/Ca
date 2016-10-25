@@ -37,12 +37,19 @@
 	// $infrastructure = $_POST['infrastructure'];
 	$question1=$_POST['question1'];
 	$question2=$_POST['question2'];
-	$question3=$_POST['question3'];
+	$question3_1=$_POST['question3_1'];
+	$question3_2=$_POST['question3_2'];
+	$question3_3=$_POST['question3_3'];
+	$question3_4=$_POST['question3_4'];
+	$question3_5=$_POST['question3_5'];
+	$question3_6=$_POST['question3_6'];
+	$question3_7=$_POST['question3_7'];
+	// $question3_1=$_POST['question3_1'];
 	$question4=$_POST['question4'];
 	$question5=$_POST['question5'];
 	$question6=$_POST['question6'];
 	$question7=$_POST['question7'];
-	if($question1=='' || $question2=='' || $question3=='' || $question4=='' || $question5=='' || $question6=='' || $question7=='')
+	if($question1=='' || $question2=='' || $question3_1=='' || $question3_2=='' || $question3_3=='' || $question3_4=='' || $question3_5=='' || $question3_6=='' || $question3_7=='' || $question4=='' || $question5=='' || $question6=='' || $question7=='')
 	else{
 		echo json_encode(array('status'=>'error','msg'=>'please fill the form completely'));
 		exit;
