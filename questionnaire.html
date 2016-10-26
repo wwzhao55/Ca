@@ -43,10 +43,10 @@
         </div>
         <div class="title">3.在以下领域中，哪些是您接下来的6个月中最需要改善的？（可多选）</div>
         <div>
-            <label style="float: left"><input name="Fruit" type="checkbox" value="" />服务虚拟化管理</label>
-            <label style="float: left"><input name="Fruit" type="checkbox" value="" />API安全管理</label>
-            <label style="float: left"><input name="Fruit" type="checkbox" value="" />应用性能管理</label>
-            <label style="float: left"><input name="Fruit" type="checkbox" value="" />其他</label>
+            <div style="display: block"><input name="Fruit" type="checkbox" value=""/><span>服务虚拟化管理</span></div>
+            <div style="display: block"><input name="Fruit" type="checkbox" value=""/><span>API安全管理</span></div>
+            <div style="display: block"><input name="Fruit" type="checkbox" value=""/><span>应用性能管理</span></div>
+            <div style="display: block"><input name="Fruit" type="checkbox" value=""/><span>其他</span></div>
         </div>
         <div class="title">4.这个项目是否已经获得预算支持？</div>
         <div class='dropdown'>
@@ -121,6 +121,15 @@
         var seven = reg_form.seven.value;
         if (trim(name) && trim(job) && trim(email) && trim(company) && trim(phone) && trim(one) && trim(two)
                 && trim(four) && trim(six) && trim(seven)) {
+            $("input[input='selected']").each(function (i) {
+//input[name^='selected']"意思是匹配input的name以selected开头的表单。
+                var isCheck = $(this).attr("checked");
+                if ('checked' == isCheck || isCheck) {
+                    alert("已被选中!");
+                } else {
+                    alert("未被选中!");
+                }
+            });
             var check1 = checkEmail($("input[name='email']").val());
             var check2 = checkTel($("input[name='phone']").val());
             if (check1 == true && check2 == true) {
