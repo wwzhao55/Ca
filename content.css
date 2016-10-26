@@ -107,7 +107,7 @@ textarea::-webkit-input-placeholder {
 
 #reg_submit {
     display: block;
-    width: 300px;
+    width: 320px;
     height: 60px;
     background-color: #164460;
     opacity: 0.8;
@@ -115,7 +115,7 @@ textarea::-webkit-input-placeholder {
     outline: none;
     border: none;
     box-shadow: none;
-    font-size: 28px;
+    font-size: 30px;
     border-radius: 10px;
     margin: 40px auto 100px auto;
     font-weight: lighter;
