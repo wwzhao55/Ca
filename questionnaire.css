@@ -85,6 +85,7 @@ textarea::-webkit-input-placeholder {
 }
 .title{
     font-size: 28px;
+    margin: 0px;
 }
 #reg_form {
     width: 600px;
