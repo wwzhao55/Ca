@@ -97,17 +97,17 @@
     }
     $('#reg_submit').on('click', function () {
         var name = reg_form.name.value;
-        var email = reg_form.site.value;
-        var company = reg_form.email.value;
-        var company_type = reg_form.company.value;
-        var company_type = reg_form.phone.value;
-        var phone = reg_form.one.value;
-        var job_title = reg_form.two.value;
-        var province = reg_form.four.value;
-        var infrastructure = reg_form.six.value;
-        var infrastructure = reg_form.seven.value;
-        if (trim(name) && trim(email) && trim(company) && trim(company_type) && trim(phone) && trim(job_title)
-                && trim(province) && trim(infrastructure)) {
+        var site = reg_form.site.value;
+        var email = reg_form.email.value;
+        var company = reg_form.company.value;
+        var phone = reg_form.phone.value;
+        var one = reg_form.one.value;
+        var two = reg_form.two.value;
+        var four = reg_form.four.value;
+        var six = reg_form.six.value;
+        var seven = reg_form.seven.value;
+        if (trim(name) && trim(site) && trim(email) && trim(company)&& trim(phone) && trim(one) && trim(two)
+                && trim(four) && trim(six)&& trim(seven)) {
             var check1 = checkEmail($("input[name='email']").val());
             var check2 = checkTel($("input[name='phone']").val());
             if (check1 == true && check2 == true) {
