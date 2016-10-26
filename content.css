@@ -141,7 +141,7 @@ textarea::-webkit-input-placeholder {
     margin-bottom: 20px;
     background-color: #fff;
     width: 660px;
-    font-size: 24px;
+    font-size: 28px;
     padding-left: 20px;
     padding-right: 0;
     height: 90px;
@@ -160,7 +160,7 @@ textarea::-webkit-input-placeholder {
     margin-bottom: 20px;
     background-color: #fff;
     width: 100%;
-    font-size: 24px;
+    font-size: 28px;
     padding-left: 20px;
     padding-right: 0;
     height: 60px;
