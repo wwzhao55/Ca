@@ -5,51 +5,53 @@
 	
 	//header("Content-Type: text/html;charset=utf-8"); 
 	// error_reporting(E_ALL ^ E_DEPRECATED);
-	echo "hehe";exit;
-	// $link=mysql_connect('121.42.136.52','one','redhatredhat') or die("无法连接到数据库");//连接到数据库
-	// $db_exist=mysql_select_db('ca');
-	// // if(!$db_exist)
-	// // {
-	// // 	$create_d="create database zerto";
-	// // 	mysql_query($create_d);
-	// // 	mysql_select_db('zerto');
-	// // 	$create_t="create table users
-	// // 	(id int not null auto_increment,
-	// // 	 PRIMARY KEY(id),
-	// // 	 name varchar(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci,
-	// // 	 email varchar(32) not null,
-	// // 	 company varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci,
-	// // 	 company_type varchar(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci,
-	// // 	 phone char(11),
-	// // 	 job_title varchar(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci,
-	// // 	 province varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci,
-	// // 	 infrastructure varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci
-	// // 	 )";
-	// // 	mysql_query($create_t);
-	// // }
-	// //获取post的数据
-	// $name = $_POST['name'];
-	// $email = $_POST['email'];
-	// $company = $_POST['company'];
-	// // $company_type = $_POST['company'];
-	// $phone = $_POST['phone'];
-	// $job = $_POST['job'];
-	// // $province = $_POST['province'];
-	// // $infrastructure = $_POST['infrastructure'];
-	// $question1=$_POST['question1'];
-	// $question2=$_POST['question2'];
+	// echo "hehe";exit;
+	$link=mysql_connect('121.42.136.52','one','redhatredhat') or die("无法连接到数据库");//连接到数据库
+	$db_exist=mysql_select_db('ca');
+	// if(!$db_exist)
+	// {
+	// 	$create_d="create database zerto";
+	// 	mysql_query($create_d);
+	// 	mysql_select_db('zerto');
+	// 	$create_t="create table users
+	// 	(id int not null auto_increment,
+	// 	 PRIMARY KEY(id),
+	// 	 name varchar(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci,
+	// 	 email varchar(32) not null,
+	// 	 company varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci,
+	// 	 company_type varchar(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci,
+	// 	 phone char(11),
+	// 	 job_title varchar(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci,
+	// 	 province varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci,
+	// 	 infrastructure varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci
+	// 	 )";
+	// 	mysql_query($create_t);
+	// }
+	//获取post的数据
+	$name = $_POST['name'];
+	$email = $_POST['email'];
+	$company = $_POST['company'];
+	// $company_type = $_POST['company'];
+	$phone = $_POST['phone'];
+	$job = $_POST['job'];
+	// $province = $_POST['province'];
+	// $infrastructure = $_POST['infrastructure'];
+	$question1=$_POST['question1'];
+	$question2=$_POST['question2'];
+	$question3_1=$_POST['question3_1'];
+	$question3_2=$_POST['question3_2'];
+	$question3_3=$_POST['question3_3'];
+	$question3_4=$_POST['question3_4'];
+	$question3_5=$_POST['question3_5'];
+	$question3_6=$_POST['question3_6'];
+	$question3_7=$_POST['question3_7'];
 	// $question3_1=$_POST['question3_1'];
-	// $question3_2=$_POST['question3_2'];
-	// $question3_3=$_POST['question3_3'];
-	// $question3_4=$_POST['question3_4'];
-	// $question3_5=$_POST['question3_5'];
-	// $question3_6=$_POST['question3_6'];
-	// $question3_7=$_POST['question3_7'];
-	// // $question3_1=$_POST['question3_1'];
-	// $question4=$_POST['question4'];
-	// $question5=$_POST['question5'];
-	// $question6=$_POST['question6'];
-	// $question7=$_POST['question7'];
+	$question4=$_POST['question4'];
+	$question5=$_POST['question5'];
+	$question6=$_POST['question6'];
+	$question7=$_POST['question7'];
+	print_r($name);exit;
+	echo "hehe nimei";exit;
 	// if($question1=='' || $question2=='' || $question3_1=='' || $question3_2=='' || $question3_3=='' || $question3_4=='' || $question3_5=='' || $question3_6=='' || $question3_7=='' || $question4=='' || $question5=='' || $question6=='' || $question7=='')
 	// else{
 	// 	echo json_encode(array('status'=>'error','msg'=>'please fill the form completely'));
