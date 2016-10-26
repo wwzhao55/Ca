@@ -66,10 +66,9 @@
                 <li value="转销商/集成商">C.其他</li>
             </ul>
         </div>
-
+        <div class='err_msg'></div>
+        <button type='button' id='reg_submit'>确定</button>
     </form>
-    <div class='err_msg'></div>
-    <button type='button' id='reg_submit'>确定</button>
 </div>
 <script type='text/javascript'>
     function trim(str) {
@@ -131,6 +130,7 @@
                 }
             }
         } else {
+            alert("请输入完整信息！")
             $('.err_msg').html('请填写完整信息！');
         }
     })
