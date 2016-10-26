@@ -63,6 +63,11 @@ input.check {
     height: 20px;
 }
 
+span.ttt {
+    font-size: 24px;
+    color: #333333;
+}
+
 .navbar-header {
     float: left;
     color: #fff;
