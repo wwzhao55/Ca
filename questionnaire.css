@@ -114,6 +114,12 @@ span.ttt {
     width: 300px;
 }
 
+.user-info input{
+    display: inline-block;
+    width: 220px;
+
+}
+
 #in1 {
     width: 300px;
 }
