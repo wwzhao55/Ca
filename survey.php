@@ -5,53 +5,16 @@
 	
 	//header("Content-Type: text/html;charset=utf-8"); 
 	error_reporting(E_ALL ^ E_DEPRECATED);
-	// // echo "hehe";exit;
+
 	$link=mysql_connect('121.42.136.52','one','redhatredhat') or die("无法连接到数据库");//连接到数据库
 	$db_exist=mysql_select_db('ca');
-	// if(!$db_exist)
-	// 	echo "hehe";
-	// echo $db_exist;exit;
-	// $select="select * from ca.ca";
-	// $result=mysql_query($select);
-	// echo $result;exit;
-	// if(!$db_exist)
-	// {
-	// 	$create_d="create database zerto";
-	// 	mysql_query($create_d);
-	// 	mysql_select_db('zerto');
-	// 	$create_t="create table users
-	// 	(id int not null auto_increment,
-	// 	 PRIMARY KEY(id),
-	// 	 name varchar(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci,
-	// 	 email varchar(32) not null,
-	// 	 company varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci,
-	// 	 company_type varchar(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci,
-	// 	 phone char(11),
-	// 	 job_title varchar(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci,
-	// 	 province varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci,
-	// 	 infrastructure varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci
-	// 	 )";
-	// 	mysql_query($create_t);
-	// }
-// 	$servername="121.42.136.52";
-// 	$username="one";
-// 	$password="redhatredhat";
-// 	$dbname="ca";
-// 	// 创建连接
-// $conn = mysqli_connect($servername, $username, $password, $dbname);
-// // 检测连接
-// if (!$conn) {
-//     die("Connection failed: " . mysqli_connect_error());
-// }
+	
 	//获取post的数据
 	$name = $_POST['name'];
 	$email = $_POST['email'];
 	$company = $_POST['company'];
-	// $company_type = $_POST['company'];
 	$phone = $_POST['phone'];
 	$job = $_POST['job'];
-	// $province = $_POST['province'];
-	// $infrastructure = $_POST['infrastructure'];
 	$question1=$_POST['question1'];
 	$question2=$_POST['question2'];
 	$question3_1=$_POST['question3_1'];
@@ -61,18 +24,16 @@
 	$question3_5=$_POST['question3_5'];
 	$question3_6=$_POST['question3_6'];
 	$question3_7=$_POST['question3_7'];
-	// $question3_1=$_POST['question3_1'];
 	$question4=$_POST['question4'];
 	$question5=$_POST['question5'];
 	$question6=$_POST['question6'];
 	$question7=$_POST['question7'];
+	//验证
 	if($question1=='' || $question2=='' || $question3_1=='' || $question3_2=='' || $question3_3=='' || $question3_4=='' || $question3_5=='' || $question3_6=='' || $question3_7=='' || $question4=='' || $question5=='' || $question6=='' || $question7=='')
 	{
 		echo json_encode(array('status'=>'error','msg'=>'please fill the form completely'));
 		exit;
 	}
-
-	//验证
 	if(trim($name) && trim($email) && trim($company) && trim($phone) && trim($job) && trim($question1) && trim($question2) && trim($question3_1) && trim($question3_2) && trim($question3_3) && trim($question3_4) && trim($question3_5) && trim($question3_6) && trim($question3_7) && trim($question4) && trim($question5) && trim($question6) && trim($question7)){
 		if(!preg_match("/^1[34578]{1}\d{9}$/",$phone)){  
 		    echo json_encode(array('status'=>'error','msg'=>'your format of phone is wrong'));
