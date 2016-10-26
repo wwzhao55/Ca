@@ -7,10 +7,11 @@
 	// error_reporting(E_ALL ^ E_DEPRECATED);
 	// echo "hehe";exit;
 	$link=mysql_connect('121.42.136.52','one','redhatredhat') or die("无法连接到数据库");//连接到数据库
-	$db_exist=mysql_select_db('ca');
-	$select="select * from ca";
-	$result=mysql_query($select);
-	echo $result;exit;
+	$db_exist=mysql_select_db('ca',$link);
+	echo $db_exist;exit;
+	// $select="select * from ca.ca";
+	// $result=mysql_query($select);
+	// echo $result;exit;
 	// if(!$db_exist)
 	// {
 	// 	$create_d="create database zerto";
@@ -85,9 +86,9 @@
 		exit;
 	}
 	//存入数据库
-	mysql_query('set names utf8;'); 
+	// mysql_query('set names utf8;'); 
 
-	$insert = "insert into ca(id,name,company,job,phone,email,question1,question2,question3_1,question3_2,question3_3,question3_4,question3_5,question3_6,question3_7,question4,question5,question6,question7) values(NULL,'$name','$company','$job','$phone','$email','$question1','$question2','$question3_1','$question3_2','$question3_3','$question3_4','$question3_5','$question3_6','$question3_7','$question4','$question5','$question6','$question7')";
+	$insert = "insert into ca.ca(id,name,company,job,phone,email,question1,question2,question3_1,question3_2,question3_3,question3_4,question3_5,question3_6,question3_7,question4,question5,question6,question7) values(NULL,'$name','$company','$job','$phone','$email','$question1','$question2','$question3_1','$question3_2','$question3_3','$question3_4','$question3_5','$question3_6','$question3_7','$question4','$question5','$question6','$question7')";
 echo $insert;
 	mysql_query($insert);
 
