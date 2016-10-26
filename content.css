@@ -215,12 +215,13 @@ textarea::-webkit-input-placeholder {
 
 .select_type li.active, .select_type li:active, .select_type li:focus {
     color: #fff;
-    background-color: #ba0c25;
+    background-color: #164460;
+    opacity: 0.8;
 }
 
 .err_msg {
     padding-left: 20px;
-    color: #ba0c25;
+    background-color: #164460;
     font-size: 18px;
 }
 
