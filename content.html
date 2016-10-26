@@ -24,7 +24,7 @@
 
         <div class='dropdown'>
             <button><span>1.贵企业现在有多少开发人员？</span><span class='caret'></span></button>
-            <input type='text' name='company_type'>
+            <input type='text' name='one'>
             <ul class='form-select select_type select_company_type'>
                 <li value="企业">数十人</li>
                 <li value="云提供商">数百人</li>
@@ -34,7 +34,7 @@
         </div>
         <div class='dropdown'>
             <button id="ymh"><span>2.在过去6个月中，贵公司是否发生过应用系统宕机或者性能太慢而接到大量用户投诉？</span><span class='caret'></span></button>
-            <input type='text' name='company_type'>
+            <input type='text' name='two'>
             <ul class='form-select select_type select_company_type'>
                 <li value="企业">有</li>
                 <li value="云提供商">没有</li>
@@ -42,7 +42,7 @@
         </div>
         <div class='dropdown'>
             <button><span>4.这个项目是否已经获得预算支持？ </span><span class='caret'></span></button>
-            <input type='text' name='company_type'>
+            <input type='text' name='four'>
             <ul class='form-select select_type select_company_type'>
                 <li value="企业">A.是的，0~6个月内</li>
                 <li value="云提供商">B.是的， 6~12个月内</li>
@@ -51,7 +51,7 @@
         </div>
         <div class='dropdown'>
             <button><span>6.我们可以通过何种方式帮您解决这些问题？</span><span class='caret'></span></button>
-            <input type='text' name='company_type'>
+            <input type='text' name='six'>
             <ul class='form-select select_type select_company_type'>
                 <li value="企业">A.发给我CA Technologies解决方案的相关信息</li>
                 <li value="云提供商">B.联系我并安排一次技术交流</li>
@@ -59,7 +59,7 @@
         </div>
         <div class='dropdown'>
             <button><span>7.您在进程决策中所扮演的角色可被描述为:</span><span class='caret'></span></button>
-            <input type='text' name='company_type'>
+            <input type='text' name='seven'>
             <ul class='form-select select_type select_company_type'>
                 <li value="企业">A.影响者</li>
                 <li value="云提供商">B.最终决策者</li>
@@ -97,13 +97,15 @@
     }
     $('#reg_submit').on('click', function () {
         var name = reg_form.name.value;
-        var email = reg_form.email.value;
-        var company = reg_form.company.value;
-        var company_type = reg_form.company_type.value;
-        var phone = reg_form.phone.value;
-        var job_title = reg_form.job_title.value;
-        var province = reg_form.province.value;
-        var infrastructure = reg_form.infrastructure.value;
+        var email = reg_form.site.value;
+        var company = reg_form.email.value;
+        var company_type = reg_form.company.value;
+        var company_type = reg_form.phone.value;
+        var phone = reg_form.one.value;
+        var job_title = reg_form.two.value;
+        var province = reg_form.four.value;
+        var infrastructure = reg_form.six.value;
+        var infrastructure = reg_form.seven.value;
         if (trim(name) && trim(email) && trim(company) && trim(company_type) && trim(phone) && trim(job_title)
                 && trim(province) && trim(infrastructure)) {
             alert("321")
