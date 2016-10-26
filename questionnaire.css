@@ -109,6 +109,10 @@ span.ttt {
     margin: 0 auto;
     box-sizing: border-box;
 }
+.user-info{
+    display: inline-block;
+    width: 300px;
+}
 
 #in1 {
     width: 300px;
