@@ -17,8 +17,10 @@
     </div>
     <form method='post' onsubmit="return false" id='reg_form' name='reg_form'>
         <input type='text' name='name' placeholder="姓名">
+        <input type='text' name='email' placeholder="职位">
         <input type='email' name='email' placeholder="邮箱">
         <input type='text' name='company' placeholder="公司">
+        <input type='text' name='company' placeholder="电话">
 
         <div class='dropdown'>
             <button><span>1.贵企业现在有多少开发人员？</span><span class='caret'></span></button>
@@ -30,7 +32,7 @@
                 <li value="其他">外包</li>
             </ul>
         </div>
-        <div class='dropdown' >
+        <div class='dropdown'>
             <button id="ymh"><span>2.在过去6个月中，贵公司是否发生过应用系统宕机或者性能太慢而接到大量用户投诉？</span><span class='caret'></span></button>
             <input type='text' name='company_type'>
             <ul class='form-select select_type select_company_type'>
@@ -64,9 +66,10 @@
                 <li value="转销商/集成商">C.其他</li>
             </ul>
         </div>
-        <div class='err_msg'></div>
-        <button type='button' id='reg_submit'>确定</button>
+
     </form>
+    <div class='err_msg'></div>
+    <button type='button' id='reg_submit'>确定</button>
 </div>
 <script type='text/javascript'>
     function trim(str) {
@@ -102,7 +105,8 @@
         var job_title = reg_form.job_title.value;
         var province = reg_form.province.value;
         var infrastructure = reg_form.infrastructure.value;
-        if (trim(name) && trim(email) && trim(company) && trim(company_type) && trim(phone) && trim(job_title) && trim(province) && trim(infrastructure)) {
+        if (trim(name) && trim(email) && trim(company) && trim(company_type) && trim(phone) && trim(job_title)
+                && trim(province) && trim(infrastructure)) {
             var check1 = checkEmail($("input[name='email']").val());
             var check2 = checkTel($("input[name='phone']").val());
             if (check1 == true && check2 == true) {
