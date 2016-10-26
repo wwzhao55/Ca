@@ -50,47 +50,45 @@
 	$question5=$_POST['question5'];
 	$question6=$_POST['question6'];
 	$question7=$_POST['question7'];
-	print_r($name);exit;
-	echo "hehe nimei";exit;
-	// if($question1=='' || $question2=='' || $question3_1=='' || $question3_2=='' || $question3_3=='' || $question3_4=='' || $question3_5=='' || $question3_6=='' || $question3_7=='' || $question4=='' || $question5=='' || $question6=='' || $question7=='')
-	// else{
-	// 	echo json_encode(array('status'=>'error','msg'=>'please fill the form completely'));
-	// 	exit;
-	// }
-
-	// //验证
-	// if(trim($name) && trim($email) && trim($company) && trim($company_type) && trim($phone) && trim($job_title) && trim($province) && trim($infrastructure)){
-	// 	if(!preg_match("/^1[34578]{1}\d{9}$/",$phone)){  
-	// 	    echo json_encode(array('status'=>'error','msg'=>'your format of phone is wrong'));
-	// 	    exit;
-	// 	}
-	// 	if(!filter_var($email, FILTER_VALIDATE_EMAIL)){  
-	// 	    echo json_encode(array('status'=>'error','msg'=>'your format of email is wrong"'));  
-	// 	    exit;
-	// 	}
-	// }else{
-	// 	echo json_encode(array('status'=>'error','msg'=>'please fill the form completely'));
-	// 	exit;
-	// }
-	// //检查手机号、邮箱是否存在
-	// $has_phone = mysql_query("select * from ca where phone='$phone'");
-	// if(mysql_num_rows($has_phone)){
-	// 	echo json_encode(array('status'=>'error','msg'=>'the phone number is registered'));
-	// 	exit;
-	// }
-	// $has_email = mysql_query("select * from ca where email='$email'");
-	// if(mysql_num_rows($has_email)){
-	// 	echo json_encode(array('status'=>'error','msg'=>'the emailbox is registered'));
-	// 	exit;
-	// }
-	// //存入数据库
-	// mysql_query('set names utf8;'); 
-	// $insert = "insert into ca(name,company,job,phone,email,question1,question2,question3_1,question3_2,question3_3,question3_4,question3_5,question3_6,question3_7,question4,question5,question6,question7) values('$name','$company','$job','$phone','$email','$question1','$question2','$question3_1','$question3_2','$question3_3','$question3_4','$question3_5','$question3_6','$question3_7','$question4','$question5','$question6','$question7',)";
-	// mysql_query($insert);
-	// if(mysql_affected_rows()<=0){
-	// 	echo json_encode(array('status'=>'error','msg'=>'add data errorly'));
-	// 	exit;
-	// }
-	// mysql_close($link);
-	// echo json_encode(array("status"=>"success","msg"=>"add data successfully"));
+	if($question1=='' || $question2=='' || $question3_1=='' || $question3_2=='' || $question3_3=='' || $question3_4=='' || $question3_5=='' || $question3_6=='' || $question3_7=='' || $question4=='' || $question5=='' || $question6=='' || $question7=='')
+	else{
+		echo json_encode(array('status'=>'error','msg'=>'please fill the form completely'));
+		exit;
+	}
+echo "haha";exit;
+	//验证
+	if(trim($name) && trim($email) && trim($company) && trim($company_type) && trim($phone) && trim($job_title) && trim($province) && trim($infrastructure)){
+		if(!preg_match("/^1[34578]{1}\d{9}$/",$phone)){  
+		    echo json_encode(array('status'=>'error','msg'=>'your format of phone is wrong'));
+		    exit;
+		}
+		if(!filter_var($email, FILTER_VALIDATE_EMAIL)){  
+		    echo json_encode(array('status'=>'error','msg'=>'your format of email is wrong"'));  
+		    exit;
+		}
+	}else{
+		echo json_encode(array('status'=>'error','msg'=>'please fill the form completely'));
+		exit;
+	}
+	//检查手机号、邮箱是否存在
+	$has_phone = mysql_query("select * from ca where phone='$phone'");
+	if(mysql_num_rows($has_phone)){
+		echo json_encode(array('status'=>'error','msg'=>'the phone number is registered'));
+		exit;
+	}
+	$has_email = mysql_query("select * from ca where email='$email'");
+	if(mysql_num_rows($has_email)){
+		echo json_encode(array('status'=>'error','msg'=>'the emailbox is registered'));
+		exit;
+	}
+	//存入数据库
+	mysql_query('set names utf8;'); 
+	$insert = "insert into ca(name,company,job,phone,email,question1,question2,question3_1,question3_2,question3_3,question3_4,question3_5,question3_6,question3_7,question4,question5,question6,question7) values('$name','$company','$job','$phone','$email','$question1','$question2','$question3_1','$question3_2','$question3_3','$question3_4','$question3_5','$question3_6','$question3_7','$question4','$question5','$question6','$question7',)";
+	mysql_query($insert);
+	if(mysql_affected_rows()<=0){
+		echo json_encode(array('status'=>'error','msg'=>'add data errorly'));
+		exit;
+	}
+	mysql_close($link);
+	echo json_encode(array("status"=>"success","msg"=>"add data successfully"));
 ?>
