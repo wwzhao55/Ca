@@ -88,9 +88,9 @@
 	mysql_query('set names utf8;'); 
 
 	$insert = "insert into ca(id,name,company,job,phone,email,question1,question2,question3_1,question3_2,question3_3,question3_4,question3_5,question3_6,question3_7,question4,question5,question6,question7) values(NULL,'$name','$company','$job','$phone','$email','$question1','$question2','$question3_1','$question3_2','$question3_3','$question3_4','$question3_5','$question3_6','$question3_7','$question4','$question5','$question6','$question7')";
-	echo $insert;exit;
+
 	mysql_query($insert);
-	echo mysql_query($insert);exit;
+
 	if(mysql_affected_rows()<=0){
 		echo json_encode(array('status'=>'error','msg'=>'add data errorly'));
 		exit;
