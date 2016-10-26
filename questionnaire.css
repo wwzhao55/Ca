@@ -134,25 +134,6 @@ textarea::-webkit-input-placeholder {
     display: none;
 }
 
-#ymh {
-    font-family: 'Microsoft Yahei', "WhitneyMedium", Arial, sans-serif;
-    display: block;
-    text-align: left;
-    margin-bottom: 20px;
-    background-color: #fff;
-    width: 660px;
-    font-size: 28px;
-    padding-left: 20px;
-    padding-right: 0;
-    height: 90px;
-    border: 1px solid #dcdcdc;
-    color: #999;
-    box-sizing: border-box;
-    font-weight: lighter;
-    outline: none;
-    cursor: pointer;
-}
-
 .dropdown button {
     font-family: 'Microsoft Yahei', "WhitneyMedium", Arial, sans-serif;
     display: block;
