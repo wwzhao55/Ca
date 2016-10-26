@@ -41,6 +41,37 @@
                 <li value="B">没有</li>
             </ul>
         </div>
+        <div class="title">3.在以下领域中，哪些是您接下来的6个月中最需要改善的？（可多选）</div>
+        <div>
+            <div style="display: block"><input id="y1" class="check" type="checkbox" value=""
+                                               style="display: inline-block ;width: 20px;height: 20px"/><span
+                    class="ttt">服务虚拟化管理</span>
+            </div>
+            <div style="display: block"><input id="y2" class="check" type="checkbox" value=""
+                                               style="display: inline-block ;width: 20px;height: 20px"/><span
+                    class="ttt">API安全管理</span>
+            </div>
+            <div style="display: block"><input id="y3" class="check" type="checkbox" value=""
+                                               style="display: inline-block ;width: 20px;height: 20px"/><span
+                    class="ttt">应用性能管理</span>
+            </div>
+            <div style="display: block"><input id="y4" class="check" type="checkbox" value=""
+                                               style="display: inline-block ;width: 20px;height: 20px"/><span
+                    class="ttt">发布自动化管理</span>
+            </div>
+            <div style="display: block"><input id="y5" class="check" type="checkbox" value=""
+                                               style="display: inline-block ;width: 20px;height: 20px"/><span
+                    class="ttt">基础设施统一监控</span>
+            </div>
+            <div style="display: block"><input id="y6" class="check" type="checkbox" value=""
+                                               style="display: inline-block ;width: 20px;height: 20px"/><span
+                    class="ttt">移动应用分析</span>
+            </div>
+            <div style="display: block"><input id="y7" class="check" type="checkbox" value=""
+                                               style="display: inline-block ;width: 20px;height: 20px"/><span
+                    class="ttt">其他</span>
+            </div>
+        </div>
         <div class="title">4.这个项目是否已经获得预算支持？</div>
         <div class='dropdown'>
             <button><span></span><span class='caret'></span></button>
@@ -52,7 +83,7 @@
             </ul>
         </div>
         <div class="title">5.您目前正在着眼解决什么具体的IT问题？</div>
-        <input type="text" name="five">
+        <input type="text" id="five">
         <div class="title">6.我们可以通过何种方式帮您解决这些问题？</div>
         <div class='dropdown'>
             <button><span></span><span class='caret'></span></button>
@@ -110,38 +141,62 @@
         var one = reg_form.one.value;
         var two = reg_form.two.value;
         var four = reg_form.four.value;
+        var five = document.getElementById("five").value;
         var six = reg_form.six.value;
         var seven = reg_form.seven.value;
         if (trim(name) && trim(job) && trim(email) && trim(company) && trim(phone) && trim(one) && trim(two)
-                && trim(four) && trim(six) && trim(seven)) {
+                && trim(four) && trim(five) && trim(six) && trim(seven)) {
+            var c1 = 0;
+            var c2 = 0;
+            var c3 = 0
+            var c4 = 0;
+            var c5 = 0;
+            var c6 = 0;
+            var c7 = 0;
+            if (document.getElementById("y1").checked) {
+                c1 = 1;
+            }
+            if (document.getElementById("y2").checked) {
+                c2 = 1;
+            }
+            if (document.getElementById("y3").checked) {
+                c3 = 1;
+            }
+            if (document.getElementById("y4").checked) {
+                c4 = 1;
+            }
+            if (document.getElementById("y5").checked) {
+                c5 = 1;
+            }
+            if (document.getElementById("y6").checked) {
+                c6 = 1;
+            }
+            if (document.getElementById("y7").checked) {
+                c7 = 1;
+            }
+            var c = c1 + c2 + c3 + c4 + c5 + c6 + c7;
             var check1 = checkEmail($("input[name='email']").val());
             var check2 = checkTel($("input[name='phone']").val());
-            if (check1 == true && check2 == true) {
-                var data = "name=" + name + "&" + "job=" + job + "&" + "company=" + company + "&" +
-                        "phone=" + phone + "&" +
+            if (check1 == true && check2 == true && c != "0000000") {
+                var data = "name=" + name + "&job=" + job + "&company=" + company +
+                        "&phone=" + phone + "&" +
                         "email=" + email + "&" +
-                        "question1=A" + "&" +
-                        "question2=A" + "&" +
-                        "question3_1=1" + "&" +
-                        "question3_2=1" + "&" +
-                        "question3_3=1" + "&" +
-                        "question3_4=1" + "&" +
-                        "question3_5=1" + "&" +
-                        "question3_6=1" + "&" +
-                        "question3_7=1" + "&" +
+                        "question1=" + one + "&" +
+                        "question2=" + two + "&" +
+                        "question3_1=" + c1 + "&" +
+                        "question3_2=" + c2 + "&" +
+                        "question3_3=" + c3 + "&" +
+                        "question3_4=" + c4 + "&" +
+                        "question3_5=" + c5 + "&" +
+                        "question3_6=" + c6 + "&" +
+                        "question3_7=" + c7 + "&" +
                         "question4=" + four + "&" +
-                        "question5=EWREWR" + "&" +
+                        "question5=" + five + "&" +
                         "question6=" + six + "&" +
                         "question7=" + seven;
-//                        "question1=" + one + "&" +
-//                        "question2=" + two + "&" +
-//                        "question4=" + four + "&" +
-//                        "question6=" + six + "&" +
-//                        "question7=" + seven;
                 $.ajax({
                     type: 'post',
                     url: 'http://ca.dataguiding.com/survey.php',
-//                    data: $("#reg_form").serialize(),
                     data: data,
                     dataType: 'json',
                     success: function (result) {

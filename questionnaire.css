@@ -57,6 +57,18 @@ textarea::-webkit-input-placeholder {
     background-image: url('image/Top@2x.png');
 }
 
+input.check {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+span.ttt {
+    padding-left: 6px;
+    font-size: 24px;
+    color: #333333;
+}
+
 .navbar-header {
     float: left;
     color: #fff;
@@ -83,13 +95,15 @@ textarea::-webkit-input-placeholder {
     text-align: center;
     margin: 60px 0;
 }
-.title{
+
+.title {
     font-size: 28px;
     margin: 0px;
     text-align: left;
     padding-bottom: 10px;
     color: #333333;
 }
+
 #reg_form {
     width: 600px;
     margin: 0 auto;
