@@ -114,26 +114,39 @@
                 var data = "name=" + name + "&" + "job=" + job + "&" + "company=" + company + "&" +
                         "phone=" + phone + "&" +
                         "email=" + email + "&" +
-                        "question1=" + one + "&" +
-                        "question2=" + two + "&" +
-                        "question4=" + four + "&" +
-                        "question6=" + six + "&" +
-                        "question7=" + seven;
-                $.ajax({
-                    type: 'post',
-                    url: 'http://ca.dataguiding.com/survey.php',
+                        "question1=A" +
+                        "question2=A" +
+                        "question3_1=1" +
+                        "question3_2=1" +
+                        "question3_3=1" +
+                        "question3_4=1" +
+                        "question3_5=1" +
+                        "question3_6=1" +
+                        "question3_7=1" +
+                        "question4=A" +
+                        "question5=EWREWR" +
+                        "question6=A" +
+                        "question7=A" +
+//                        "question1=" + one + "&" +
+//                        "question2=" + two + "&" +
+//                        "question4=" + four + "&" +
+//                        "question6=" + six + "&" +
+//                        "question7=" + seven;
+                        $.ajax({
+                            type: 'post',
+                            url: 'http://ca.dataguiding.com/survey.php',
 //                    data: $("#reg_form").serialize(),
-                    data: data,
-                    dataType: 'json',
-                    success: function (result) {
-                        if (result.status == 'success') {
-                            window.location.href = 'welcome.html';
-                        } else {
-                            alert("传输错误")
-                            $('.err_msg').html('*' + result.msg);
-                        }
-                    }
-                })
+                            data: data,
+                            dataType: 'json',
+                            success: function (result) {
+                                if (result.status == 'success') {
+                                    window.location.href = 'welcome.html';
+                                } else {
+                                    alert("传输错误")
+                                    $('.err_msg').html('*' + result.msg);
+                                }
+                            }
+                        })
             } else {
                 if (check1 == true) {
                     $('.err_msg').html('*' + check2);
