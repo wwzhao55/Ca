@@ -34,10 +34,8 @@
 		echo json_encode(array('status'=>'error','msg'=>'please fill the form completely'));
 		exit;
 	}
-	print_r($question3_1);
-	echo "hehe";
-	print_r(trim($question3_1));exit;
-	if(trim($name) && trim($email) && trim($company) && trim($phone) && trim($job) && trim($question1) && trim($question2) && trim($question3_1) && trim($question3_2) && trim($question3_3) && trim($question3_4) && trim($question3_5) && trim($question3_6) && trim($question3_7) && trim($question4) && trim($question5) && trim($question6) && trim($question7)){
+
+	// if(trim($name) && trim($email) && trim($company) && trim($phone) && trim($job) && trim($question1) && trim($question2) && trim($question4) && trim($question5) && trim($question6) && trim($question7)){
 		if(!preg_match("/^1[34578]{1}\d{9}$/",$phone)){  
 		    echo json_encode(array('status'=>'error','msg'=>'your format of phone is wrong'));
 		    exit;
@@ -46,10 +44,10 @@
 		    echo json_encode(array('status'=>'error','msg'=>'your format of email is wrong"'));  
 		    exit;
 		}
-	}else{
-		echo json_encode(array('status'=>'error','msg'=>'please fill the form completely'));
-		exit;
-	}
+	// }else{
+	// 	echo json_encode(array('status'=>'error','msg'=>'please fill the form completely'));
+	// 	exit;
+	// }
 	// //检查手机号、邮箱是否存在
 	// $has_phone = mysql_query("select * from ca where phone='$phone'");
 	// if(mysql_num_rows($has_phone)){
