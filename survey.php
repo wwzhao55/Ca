@@ -48,16 +48,16 @@
 		exit;
 	}
 	// //检查手机号、邮箱是否存在
-	$has_phone = mysql_query("select * from ca where phone='$phone'");
-	if(mysql_num_rows($has_phone)){
-		echo json_encode(array('status'=>'error','msg'=>'the phone number is registered'));
-		exit;
-	}
-	$has_email = mysql_query("select * from ca where email='$email'");
-	if(mysql_num_rows($has_email)){
-		echo json_encode(array('status'=>'error','msg'=>'the emailbox is registered'));
-		exit;
-	}
+	// $has_phone = mysql_query("select * from ca where phone='$phone'");
+	// if(mysql_num_rows($has_phone)){
+	// 	echo json_encode(array('status'=>'error','msg'=>'the phone number is registered'));
+	// 	exit;
+	// }
+	// $has_email = mysql_query("select * from ca where email='$email'");
+	// if(mysql_num_rows($has_email)){
+	// 	echo json_encode(array('status'=>'error','msg'=>'the emailbox is registered'));
+	// 	exit;
+	// }
 	//存入数据库
 	mysql_query('set names utf8;'); 
 
