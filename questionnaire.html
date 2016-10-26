@@ -12,101 +12,101 @@
     <head>
 <body>
 <div class='container'>
-    <p class='title'width='100%' height=180px>
+    <p class='title' width='100%' height=180px>
         <img src='image/wenjuandiaocha@2x.png' alt='logo' width='100%' height=180>
-        <p align="center" style="position: relative;top:-80px;">CA Technologies有奖调查问卷</p>
+    <p align="center" style="position: relative;top: -125px;font-size: 30px;">CA Technologies有奖调查问卷</p>
+</div>
+<form method='post' onsubmit="return false" id='reg_form' name='reg_form'>
+    <input id="in1" type='text' name='name' placeholder="姓名">
+    <input id="in2" type='text' name='company' placeholder="公司">
+    <input id="in3" type='text' name='site' placeholder="职位">
+    <input id="in4" type='text' name='phone' placeholder="电话">
+    <input id="in5" type='email' name='email' placeholder="邮箱">
+    <div class="title">1.贵企业现在有多少开发人员？</div>
+    <div class='dropdown'>
+        <button><span></span><span class='caret'></span></button>
+        <input type='text' name='one'>
+        <ul class='form-select select_type select_company_type'>
+            <li value="A">A.数十人</li>
+            <li value="B">B.数百人</li>
+            <li value="C">C.数千人</li>
+            <li value="D">D.外包</li>
+        </ul>
     </div>
-    <form method='post' onsubmit="return false" id='reg_form' name='reg_form'>
-        <input id="in1" type='text' name='name' placeholder="姓名">
-        <input id="in2" type='text' name='company' placeholder="公司">
-        <input id="in3" type='text' name='site' placeholder="职位">
-        <input id="in4" type='text' name='phone' placeholder="电话">
-        <input id="in5" type='email' name='email' placeholder="邮箱">
-        <div class="title">1.贵企业现在有多少开发人员？</div>
-        <div class='dropdown'>
-            <button><span></span><span class='caret'></span></button>
-            <input type='text' name='one'>
-            <ul class='form-select select_type select_company_type'>
-                <li value="A">A.数十人</li>
-                <li value="B">B.数百人</li>
-                <li value="C">C.数千人</li>
-                <li value="D">D.外包</li>
-            </ul>
+    <div class="title">2.在过去6个月中，贵公司是否发生过应用系统宕机或者性能太慢而接到大量用户投诉？</div>
+    <div class='dropdown'>
+        <button><span></span><span class='caret'></span></button>
+        <input type='text' name='two'>
+        <ul class='form-select select_type select_company_type'>
+            <li value="A">A.有</li>
+            <li value="B">B.没有</li>
+        </ul>
+    </div>
+    <div class="title">3.在以下领域中，哪些是您接下来的6个月中最需要改善的？（可多选）</div>
+    <div>
+        <div style="display: block"><input id="y1" class="check" type="checkbox" value=""
+                                           style="display: inline-block ;width: 20px;height: 20px"/><span
+                class="ttt">服务虚拟化管理</span>
         </div>
-        <div class="title">2.在过去6个月中，贵公司是否发生过应用系统宕机或者性能太慢而接到大量用户投诉？</div>
-        <div class='dropdown'>
-            <button><span></span><span class='caret'></span></button>
-            <input type='text' name='two'>
-            <ul class='form-select select_type select_company_type'>
-                <li value="A">A.有</li>
-                <li value="B">B.没有</li>
-            </ul>
+        <div style="display: block"><input id="y2" class="check" type="checkbox" value=""
+                                           style="display: inline-block ;width: 20px;height: 20px"/><span
+                class="ttt">API安全管理</span>
         </div>
-        <div class="title">3.在以下领域中，哪些是您接下来的6个月中最需要改善的？（可多选）</div>
-        <div>
-            <div style="display: block"><input id="y1" class="check" type="checkbox" value=""
-                                               style="display: inline-block ;width: 20px;height: 20px"/><span
-                    class="ttt">服务虚拟化管理</span>
-            </div>
-            <div style="display: block"><input id="y2" class="check" type="checkbox" value=""
-                                               style="display: inline-block ;width: 20px;height: 20px"/><span
-                    class="ttt">API安全管理</span>
-            </div>
-            <div style="display: block"><input id="y3" class="check" type="checkbox" value=""
-                                               style="display: inline-block ;width: 20px;height: 20px"/><span
-                    class="ttt">应用性能管理</span>
-            </div>
-            <div style="display: block"><input id="y4" class="check" type="checkbox" value=""
-                                               style="display: inline-block ;width: 20px;height: 20px"/><span
-                    class="ttt">发布自动化管理</span>
-            </div>
-            <div style="display: block"><input id="y5" class="check" type="checkbox" value=""
-                                               style="display: inline-block ;width: 20px;height: 20px"/><span
-                    class="ttt">基础设施统一监控</span>
-            </div>
-            <div style="display: block"><input id="y6" class="check" type="checkbox" value=""
-                                               style="display: inline-block ;width: 20px;height: 20px"/><span
-                    class="ttt">移动应用分析</span>
-            </div>
-            <div style="display: block"><input id="y7" class="check" type="checkbox" value=""
-                                               style="display: inline-block ;width: 20px;height: 20px"/><span
-                    class="ttt">其他</span>
-            </div>
+        <div style="display: block"><input id="y3" class="check" type="checkbox" value=""
+                                           style="display: inline-block ;width: 20px;height: 20px"/><span
+                class="ttt">应用性能管理</span>
         </div>
-        <div class="title">4.这个项目是否已经获得预算支持？</div>
-        <div class='dropdown'>
-            <button><span></span><span class='caret'></span></button>
-            <input type='text' name='four'>
-            <ul class='form-select select_type select_company_type'>
-                <li value="A">A.是的，0~6个月内</li>
-                <li value="B">B.是的， 6~12个月内</li>
-                <li value="C">C.尚未得到业务部门的支持</li>
-            </ul>
+        <div style="display: block"><input id="y4" class="check" type="checkbox" value=""
+                                           style="display: inline-block ;width: 20px;height: 20px"/><span
+                class="ttt">发布自动化管理</span>
         </div>
-        <div class="title">5.您目前正在着眼解决什么具体的IT问题？</div>
-        <input type="text" id="five">
-        <div class="title">6.我们可以通过何种方式帮您解决这些问题？</div>
-        <div class='dropdown'>
-            <button><span></span><span class='caret'></span></button>
-            <input type='text' name='six'>
-            <ul class='form-select select_type select_company_type'>
-                <li value="A">A.发给我CA Technologies解决方案的相关信息</li>
-                <li value="B">B.联系我并安排一次技术交流</li>
-            </ul>
+        <div style="display: block"><input id="y5" class="check" type="checkbox" value=""
+                                           style="display: inline-block ;width: 20px;height: 20px"/><span
+                class="ttt">基础设施统一监控</span>
         </div>
-        <div class="title">7.您在进程决策中所扮演的角色可被描述为:</div>
-        <div class='dropdown'>
-            <button><span></span><span class='caret'></span></button>
-            <input type='text' name='seven'>
-            <ul class='form-select select_type select_company_type'>
-                <li value="A">A.影响者</li>
-                <li value="B">B.最终决策者</li>
-                <li value="C">C.其他</li>
-            </ul>
+        <div style="display: block"><input id="y6" class="check" type="checkbox" value=""
+                                           style="display: inline-block ;width: 20px;height: 20px"/><span
+                class="ttt">移动应用分析</span>
         </div>
-        <div class='err_msg'></div>
-        <button type='button' id='reg_submit'>确定</button>
-    </form>
+        <div style="display: block"><input id="y7" class="check" type="checkbox" value=""
+                                           style="display: inline-block ;width: 20px;height: 20px"/><span
+                class="ttt">其他</span>
+        </div>
+    </div>
+    <div class="title">4.这个项目是否已经获得预算支持？</div>
+    <div class='dropdown'>
+        <button><span></span><span class='caret'></span></button>
+        <input type='text' name='four'>
+        <ul class='form-select select_type select_company_type'>
+            <li value="A">A.是的，0~6个月内</li>
+            <li value="B">B.是的， 6~12个月内</li>
+            <li value="C">C.尚未得到业务部门的支持</li>
+        </ul>
+    </div>
+    <div class="title">5.您目前正在着眼解决什么具体的IT问题？</div>
+    <input type="text" id="five">
+    <div class="title">6.我们可以通过何种方式帮您解决这些问题？</div>
+    <div class='dropdown'>
+        <button><span></span><span class='caret'></span></button>
+        <input type='text' name='six'>
+        <ul class='form-select select_type select_company_type'>
+            <li value="A">A.发给我CA Technologies解决方案的相关信息</li>
+            <li value="B">B.联系我并安排一次技术交流</li>
+        </ul>
+    </div>
+    <div class="title">7.您在进程决策中所扮演的角色可被描述为:</div>
+    <div class='dropdown'>
+        <button><span></span><span class='caret'></span></button>
+        <input type='text' name='seven'>
+        <ul class='form-select select_type select_company_type'>
+            <li value="A">A.影响者</li>
+            <li value="B">B.最终决策者</li>
+            <li value="C">C.其他</li>
+        </ul>
+    </div>
+    <div class='err_msg'></div>
+    <button type='button' id='reg_submit'>确定</button>
+</form>
 </div>
 <script type='text/javascript'>
     function trim(str) {
