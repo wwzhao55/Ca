@@ -110,6 +110,26 @@ span.ttt {
     box-sizing: border-box;
 }
 
+#in1 {
+    width: 300px;
+}
+
+#in2 {
+    width: 300px;
+}
+
+#in3 {
+    width: 300px;
+}
+
+#in4 {
+    width: 300px;
+}
+
+#in5 {
+    width: 300px;
+}
+
 #reg_form input, #reg_form select {
     display: block;
     margin-bottom: 20px;
