@@ -109,35 +109,45 @@ span.ttt {
     margin: 0 auto;
     box-sizing: border-box;
 }
-.user-info{
+
+.user-info {
     display: inline-block;
     width: 250px;
 }
 
-.user-info input{
+.user-info input {
     display: inline-block;
     width: 180px;
 
 }
 
 #in1 {
-    width: 180px;!important;
+    width: 180px;
+!important;
+}
+
+label {
+    font-size: 28px;
 }
 
 #in2 {
-    width: 180px;!important;
+    width: 180px;
+!important;
 }
 
 #in3 {
-    width: 180px;!important;
+    width: 180px;
+!important;
 }
 
 #in4 {
-    width: 180px;!important;
+    width: 180px;
+!important;
 }
 
 #in5 {
-    width: 180px;!important;
+    width: 180px;
+!important;
 }
 
 #reg_form input, #reg_form select {
