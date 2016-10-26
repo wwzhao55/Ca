@@ -4,11 +4,13 @@
 
 	
 	//header("Content-Type: text/html;charset=utf-8"); 
-	// error_reporting(E_ALL ^ E_DEPRECATED);
+	error_reporting(E_ALL ^ E_DEPRECATED);
 	// echo "hehe";exit;
 	$link=mysql_connect('121.42.136.52','one','redhatredhat') or die("无法连接到数据库");//连接到数据库
-	$db_exist=mysql_select_db('ca',$link);
-	echo $db_exist;exit;
+	$db_exist=mysql_select_db('ca');
+	if(!$db_exist)
+		echo "hehe";
+	// echo $db_exist;exit;
 	// $select="select * from ca.ca";
 	// $result=mysql_query($select);
 	// echo $result;exit;
