@@ -97,7 +97,7 @@
     }
     $('#reg_submit').on('click', function () {
         var name = reg_form.name.value;
-        var site = reg_form.site.value;
+        var job = reg_form.site.value;
         var email = reg_form.email.value;
         var company = reg_form.company.value;
         var phone = reg_form.phone.value;
@@ -106,15 +106,24 @@
         var four = reg_form.four.value;
         var six = reg_form.six.value;
         var seven = reg_form.seven.value;
-        if (trim(name) && trim(site) && trim(email) && trim(company)&& trim(phone) && trim(one) && trim(two)
-                && trim(four) && trim(six)&& trim(seven)) {
+        if (trim(name) && trim(job) && trim(email) && trim(company) && trim(phone) && trim(one) && trim(two)
+                && trim(four) && trim(six) && trim(seven)) {
             var check1 = checkEmail($("input[name='email']").val());
             var check2 = checkTel($("input[name='phone']").val());
             if (check1 == true && check2 == true) {
+                var data = "name=" + name + "&" + "job=" + job + "&" + "company=" + company + "&" +
+                        "phone=" + phone + "&" +
+                        "email=" + email + "&" +
+                        "question1=" + one + "&" +
+                        "question2=" + two + "&" +
+                        "question4=" + four + "&" +
+                        "question6=" + six + "&" +
+                        "question7=" + seven;
                 $.ajax({
                     type: 'post',
                     url: 'http://ca.dataguiding.com/survey.php',
-                    data: $("#reg_form").serialize(),
+//                    data: $("#reg_form").serialize(),
+                    data: data,
                     dataType: 'json',
                     success: function (result) {
                         if (result.status == 'success') {
