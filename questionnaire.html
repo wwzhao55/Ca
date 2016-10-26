@@ -83,7 +83,7 @@
             </ul>
         </div>
         <div class="title">5.您目前正在着眼解决什么具体的IT问题？</div>
-        <input type="text" name="five">
+        <input type="text" id="five">
         <div class="title">6.我们可以通过何种方式帮您解决这些问题？</div>
         <div class='dropdown'>
             <button><span></span><span class='caret'></span></button>
@@ -141,10 +141,11 @@
         var one = reg_form.one.value;
         var two = reg_form.two.value;
         var four = reg_form.four.value;
+        var five = document.getElementById("five").value;
         var six = reg_form.six.value;
         var seven = reg_form.seven.value;
         if (trim(name) && trim(job) && trim(email) && trim(company) && trim(phone) && trim(one) && trim(two)
-                && trim(four) && trim(six) && trim(seven)) {
+                && trim(four) && trim(five) && trim(six) && trim(seven)) {
             var c1 = 0;
             var c2 = 0;
             var c3 = 0
@@ -173,12 +174,12 @@
             if (document.getElementById("y7").checked) {
                 c7 = 1;
             }
-
+            var c = c1 + c2 + c3 + c4 + c5 + c6 + c7;
             var check1 = checkEmail($("input[name='email']").val());
             var check2 = checkTel($("input[name='phone']").val());
-            if (check1 == true && check2 == true) {
-                var data = "name=" + name + "&" + "job=" + job + "&" + "company=" + company + "&" +
-                        "phone=" + phone + "&" +
+            if (check1 == true && check2 == true && c != "0000000") {
+                var data = "name=" + name + "&job=" + job + "&company=" + company +
+                        "&phone=" + phone + "&" +
                         "email=" + email + "&" +
                         "question1=" + one + "&" +
                         "question2=" + two + "&" +
@@ -190,7 +191,7 @@
                         "question3_6=" + c6 + "&" +
                         "question3_7=" + c7 + "&" +
                         "question4=" + four + "&" +
-                        "question5=EWREWR" + "&" +
+                        "question5=" + five + "&" +
                         "question6=" + six + "&" +
                         "question7=" + seven;
                 $.ajax({
