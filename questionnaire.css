@@ -57,6 +57,12 @@ textarea::-webkit-input-placeholder {
     background-image: url('image/Top@2x.png');
 }
 
+input.check {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
 .navbar-header {
     float: left;
     color: #fff;
@@ -141,7 +147,6 @@ textarea::-webkit-input-placeholder {
 .dropdown ul, #reg_form .dropdown input {
     display: none;
 }
-
 
 .dropdown button {
     font-family: 'Microsoft Yahei', "WhitneyMedium", Arial, sans-serif;
