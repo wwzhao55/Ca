@@ -142,16 +142,6 @@ textarea::-webkit-input-placeholder {
     display: none;
 }
 
-.jqCheckbox {
-    background: transparent;
-    /* vertical-align: middle; */
-    height: 16px;
-    width: 18px;
-    _font-size: 10px;
-    display: inline-block;
-    position: absolute;
-    top: 6px;
-}
 
 .dropdown button {
     font-family: 'Microsoft Yahei', "WhitneyMedium", Arial, sans-serif;
