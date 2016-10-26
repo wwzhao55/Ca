@@ -96,7 +96,6 @@
             return true;
     }
     $('#reg_submit').on('click', function () {
-        alert("123")
         var name = reg_form.name.value;
         var email = reg_form.email.value;
         var company = reg_form.company.value;
@@ -107,6 +106,7 @@
         var infrastructure = reg_form.infrastructure.value;
         if (trim(name) && trim(email) && trim(company) && trim(company_type) && trim(phone) && trim(job_title)
                 && trim(province) && trim(infrastructure)) {
+            alert(000)
             var check1 = checkEmail($("input[name='email']").val());
             var check2 = checkTel($("input[name='phone']").val());
             if (check1 == true && check2 == true) {
