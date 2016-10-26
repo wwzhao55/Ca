@@ -41,39 +41,66 @@
                 <li value="B">没有</li>
             </ul>
         </div>
-        <div class="title">4.这个项目是否已经获得预算支持？</div>
-        <div class='dropdown'>
-            <button><span></span><span class='caret'></span></button>
-            <input type='text' name='four'>
-            <ul class='form-select select_type select_company_type'>
-                <li value="A">A.是的，0~6个月内</li>
-                <li value="B">B.是的， 6~12个月内</li>
-                <li value="C">C.尚未得到业务部门的支持</li>
-            </ul>
-        </div>
-        <div class="title">5.您目前正在着眼解决什么具体的IT问题？</div>
-        <input type="text" name="five">
-        <div class="title">6.我们可以通过何种方式帮您解决这些问题？</div>
-        <div class='dropdown'>
-            <button><span></span><span class='caret'></span></button>
-            <input type='text' name='six'>
-            <ul class='form-select select_type select_company_type'>
-                <li value="A">A.发给我CA Technologies解决方案的相关信息</li>
-                <li value="B">B.联系我并安排一次技术交流</li>
-            </ul>
-        </div>
-        <div class="title">7.您在进程决策中所扮演的角色可被描述为:</div>
-        <div class='dropdown'>
-            <button><span></span><span class='caret'></span></button>
-            <input type='text' name='seven'>
-            <ul class='form-select select_type select_company_type'>
-                <li value="A">A.影响者</li>
-                <li value="B">B.最终决策者</li>
-                <li value="C">C.其他</li>
-            </ul>
-        </div>
-        <div class='err_msg'></div>
-        <button type='button' id='reg_submit'>确定</button>
+        <div class="title">3.在以下领域中，哪些是您接下来的6个月中最需要改善的？（可多选）</div>
+        <ul class="ulradiocheck">
+            <li style="width: 99%;">
+                <a class="check"></a>
+                <input style="display:none;" id="q7_1" type="checkbox" name="q7" value="1"><label>当时在上课</label>
+            </li>
+            <li style="width: 99%;">
+                <a class="check"></a>
+                <input style="display:none;" id="q7_2" type="checkbox" name="q7" value="2">
+                <label>服务虚拟化管理</label>
+            </li>
+            <li style="width: 99%;">
+                <a class="check"></a>
+                <input style="display:none;" id="q7_3" type="checkbox" name="q7" value="2">
+                <label>API安全管理</label>
+            </li>
+            <li style="width: 99%;">
+                <a class="check"></a>
+                <input style="display:none;" id="q7_4" type="checkbox" name="q7" value="2">
+                <label>应用性能管理</label>
+            </li>
+            <li style="width: 99%;">
+                <a class="check"></a>
+                <input style="display:none;" id="q7_5" type="checkbox" name="q7" value="2">
+                <label>当时在外不方便</label>
+            </li>
+
+            <div class="title">4.这个项目是否已经获得预算支持？</div>
+            <div class='dropdown'>
+                <button><span></span><span class='caret'></span></button>
+                <input type='text' name='four'>
+                <ul class='form-select select_type select_company_type'>
+                    <li value="A">A.是的，0~6个月内</li>
+                    <li value="B">B.是的， 6~12个月内</li>
+                    <li value="C">C.尚未得到业务部门的支持</li>
+                </ul>
+            </div>
+            <div class="title">5.您目前正在着眼解决什么具体的IT问题？</div>
+            <input type="text" name="five">
+            <div class="title">6.我们可以通过何种方式帮您解决这些问题？</div>
+            <div class='dropdown'>
+                <button><span></span><span class='caret'></span></button>
+                <input type='text' name='six'>
+                <ul class='form-select select_type select_company_type'>
+                    <li value="A">A.发给我CA Technologies解决方案的相关信息</li>
+                    <li value="B">B.联系我并安排一次技术交流</li>
+                </ul>
+            </div>
+            <div class="title">7.您在进程决策中所扮演的角色可被描述为:</div>
+            <div class='dropdown'>
+                <button><span></span><span class='caret'></span></button>
+                <input type='text' name='seven'>
+                <ul class='form-select select_type select_company_type'>
+                    <li value="A">A.影响者</li>
+                    <li value="B">B.最终决策者</li>
+                    <li value="C">C.其他</li>
+                </ul>
+            </div>
+            <div class='err_msg'></div>
+            <button type='button' id='reg_submit'>确定</button>
     </form>
 </div>
 <script type='text/javascript'>
