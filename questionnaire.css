@@ -145,10 +145,11 @@ textarea::-webkit-input-placeholder {
     display: block;
     text-align: left;
     margin-bottom: 20px;
+    margin-left: 20px;
     background-color: #fff;
     width: 100%;
     font-size: 24px;
-    padding-left: 20px;
+    padding-left: 40px;
     padding-right: 0;
     height: 60px;
     border: 1px solid #dcdcdc;
