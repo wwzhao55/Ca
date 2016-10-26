@@ -135,3 +135,7 @@ span.special_tip {
     display: inline-block;
     margin-left: -100px;
 }
+.pic_container {
+    background-color: #f5f5f5;
+    overflow: hidden;
+}
