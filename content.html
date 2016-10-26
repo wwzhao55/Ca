@@ -113,13 +113,14 @@
             if (check1 == true && check2 == true) {
                 $.ajax({
                     type: 'post',
-                    url: 'register.php',
+                    url: 'http://ca.dataguiding.com/ca/survey.php',
                     data: $("#reg_form").serialize(),
                     dataType: 'json',
                     success: function (result) {
                         if (result.status == 'success') {
                             window.location.href = 'welcome.html';
                         } else {
+                            alert("传输错误")
                             $('.err_msg').html('*' + result.msg);
                         }
                     }
