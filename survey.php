@@ -8,9 +8,9 @@
 	// echo "hehe";exit;
 	$link=mysql_connect('121.42.136.52','one','redhatredhat') or die("无法连接到数据库");//连接到数据库
 	$db_exist=mysql_select_db('ca');
-	$select="select * from ca";
-	$result=mysql_query($select);
-	echo $result;exit;
+	// $select="select * from ca";
+	// $result=mysql_query($select);
+	// echo $result;exit;
 	// if(!$db_exist)
 	// {
 	// 	$create_d="create database zerto";
