@@ -55,7 +55,7 @@
 		echo json_encode(array('status'=>'error','msg'=>'please fill the form completely'));
 		exit;
 	}
-echo "haha";exit;
+
 	//验证
 	if(trim($name) && trim($email) && trim($company) && trim($company_type) && trim($phone) && trim($job_title) && trim($province) && trim($infrastructure)){
 		if(!preg_match("/^1[34578]{1}\d{9}$/",$phone)){  
