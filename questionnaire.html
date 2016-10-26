@@ -43,16 +43,16 @@
         </div>
         <div class="title">3.在以下领域中，哪些是您接下来的6个月中最需要改善的？（可多选）</div>
         <div>
-            <div style="display: block"><input class="check" type="checkbox" value=""
+            <div style="display: block"><input id="y1" class="check" type="checkbox" value=""
                                                style="display: inline-block ;width: 20px;height: 20px"/><span class="ttt">服务虚拟化管理</span>
             </div>
-            <div style="display: block"><input class="check" type="checkbox" value=""
+            <div style="display: block"><input  id="y2" class="check" type="checkbox" value=""
                                                style="display: inline-block ;width: 20px;height: 20px"/><span class="ttt">API安全管理</span>
             </div>
-            <div style="display: block"><input class="check" type="checkbox" value=""
+            <div style="display: block"><input  id="y3" class="check" type="checkbox" value=""
                                                style="display: inline-block ;width: 20px;height: 20px"/><span class="ttt">应用性能管理</span>
             </div>
-            <div style="display: block"><input class="check" type="checkbox" value=""
+            <div style="display: block"><input  id="y4" class="check" type="checkbox" value=""
                                                style="display: inline-block ;width: 20px;height: 20px"/><span class="ttt">其他</span>
             </div>
         </div>
@@ -129,15 +129,18 @@
         var seven = reg_form.seven.value;
         if (trim(name) && trim(job) && trim(email) && trim(company) && trim(phone) && trim(one) && trim(two)
                 && trim(four) && trim(six) && trim(seven)) {
-            $("input[input='selected']").each(function (i) {
-//input[name^='selected']"意思是匹配input的name以selected开头的表单。
-                var isCheck = $(this).attr("checked");
-                if ('checked' == isCheck || isCheck) {
-                    alert("已被选中!");
-                } else {
-                    alert("未被选中!");
-                }
-            });
+            if(document.getElementById("y1").checked){
+                alert("checkbox is checked");
+            }
+            if(document.getElementById("y2").checked){
+                alert("checkbox is checked");
+            }
+            if(document.getElementById("y3").checked){
+                alert("checkbox is checked");
+            }
+            if(document.getElementById("y4").checked){
+                alert("checkbox is checked");
+            }
             var check1 = checkEmail($("input[name='email']").val());
             var check2 = checkTel($("input[name='phone']").val());
             if (check1 == true && check2 == true) {
