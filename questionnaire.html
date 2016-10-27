@@ -131,6 +131,7 @@
     <p>凭此截屏在<span>CA Technologies</span>展位获得精美礼品一份</p>
 </div>
 <script type='text/javascript'>
+var canScroll = 1;
     function trim(str) {
         return str.replace(/(^\s*)|(\s*$)/g, "");
     }
@@ -244,17 +245,31 @@
                // alert("请输入完整信息！")
                $('.err-container').css({top:$('body').scrollTop()}).show();
                 document.body.style.overflow='hidden';
+                document.addEventListener("touchmove",function(e){
+                    if(canScroll==1){
+                        e.preventDefault();
+                        e.stopPropagation();
+                    }
+                },false);
                 $('.err-container').one("click", function(){
                     $(".err-container").hide();
                     document.body.style.overflow='auto';
+                    canScroll = 1;
                 });
             }
         } else {
                $('.err-container').css({top:$('body').scrollTop()}).show();
                 document.body.style.overflow='hidden';
+                document.addEventListener("touchmove",function(e){
+                    if(canScroll==1){
+                        e.preventDefault();
+                        e.stopPropagation();
+                    }
+                },false);
                 $('.err-container').one("click", function(){
                     $(".err-container").hide();
                     document.body.style.overflow='auto';
+                    canScroll = 1;
                 });
         }
     })
