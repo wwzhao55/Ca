@@ -147,10 +147,13 @@ body {
     display: inline-block;
     margin-top: 20px;
     font-family: 'AdobeSongStd-Light,CASans';
+        text-align: center;
 }
 .weixin_code {
-    padding: 100000px;
-    margin: -100000px;
+    /*padding: 100000px;
+    margin: -100000px;*/
+        margin-left: 29%;
+    margin-top: 80px;
 }
 title {
     color: #fff;
