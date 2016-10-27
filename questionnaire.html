@@ -234,6 +234,9 @@ document.addEventListener("touchmove",function(e){
                         if (result.status == 'success') {
                             $('.hide-block').empty().append($('.success-block'));
                             $('.hide-block .success-block').show();
+                            $("#reg_submit").on('click',function(){
+                                window.location.href='index.html';
+                            })
                         } else {
                             alert("传输错误")
                             $('.err_msg').html('*' + result.msg);
