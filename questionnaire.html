@@ -19,12 +19,16 @@
 <form method='post' onsubmit="return false" id='reg_form' name='reg_form'>
     <div class="user-info"><label style="display: inline-block">姓名</label><input id="in1" type='text' name='name'></div>
     <div class="user-info"><label style="display: inline-block">公司</label>
-        <input id="in2" type='text' name='company' style="width: 200px;margin-left: 20px">
+        <input id="in2" type='text' name='company' style="width: 168px;margin-left: 20px;">
     </div>
-    <div class="user-info"><label style="display: inline-block">职位</label><input id="in3" type='text' name='site'></div>
-    <div class="user-info"><label style="display: inline-block">电话</label><input id="in4" type='text' name='phone'>
+    <div class="user-info"><label style="display: inline-block">职位</label><input id="in3" type='text' name='site'
+                                                                                 style="width: 168px;margin-left: 20px;">
     </div>
-    <div class="user-info"><label style="display: inline-block">邮箱</label><input id="in5" type='email' name='email'>
+    <div class="user-info"><label style="display: inline-block">电话</label><input id="in4" type='text' name='phone'
+                                                                                 style="width: 168px;margin-left: 20px;">
+    </div>
+    <div class="user-info"><label style="display: inline-block">邮箱</label><input id="in5" type='email' name='email'
+                                                                                 style="width: 168px;margin-left: 20px;">
     </div>
     <div class="title">1.贵企业现在有多少开发人员？</div>
     <div class='dropdown'>
@@ -75,7 +79,7 @@
         <div style="display: block"><input id="y7" class="check" type="checkbox" value=""
                                            style="display: inline-block ;width: 20px;height: 20px"/><span
                 class="ttt">其他</span>
-            <input id="question_qita"type="text" style="display: inline-block ;width: 510px;">
+            <input id="question_qita" type="text" style="display: inline-block ;width: 510px;">
         </div>
     </div>
     <div class="title">4.这个项目是否已经获得预算支持？</div>
@@ -178,7 +182,7 @@
             if (document.getElementById("y6").checked) {
                 c6 = 1;
             }
-            if (question_qita.length>0||document.getElementById("y7").checked) {
+            if (question_qita.length > 0 || document.getElementById("y7").checked) {
                 c7 = 1;
             }
             var c = c1 + c2 + c3 + c4 + c5 + c6 + c7;
@@ -196,7 +200,7 @@
                         "question3_4=" + c4 + "&" +
                         "question3_5=" + c5 + "&" +
                         "question3_6=" + c6 + "&" +
-                        "question3_7=" + c7+question_qita + "&" +
+                        "question3_7=" + c7 + question_qita + "&" +
                         "question4=" + four + "&" +
                         "question5=" + five + "&" +
                         "question6=" + six + "&" +
