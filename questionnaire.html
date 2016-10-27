@@ -234,6 +234,7 @@ document.addEventListener("touchmove",function(e){
                         if (result.status == 'success') {
                             $('.hide-block').empty().append($('.success-block'));
                             $('.hide-block .success-block').show();
+                            $("#reg_submit").unbind('click');
                             $("#reg_submit").on('click',function(){
                                 window.location.href='index.html';
                             })
