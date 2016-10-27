@@ -217,7 +217,8 @@ span.title_list {
     width: 200px;
     display: inline-block;
     margin-bottom: 40px;
-        height: 40px;
+    height: 40px;
+    line-height: 40px;
 }
 .content_list_2 {
     background-image: url('image/phone_index/background_2.png');
@@ -234,9 +235,9 @@ span.title_list {
     padding: 0;
 }
 img.view {
-    width: 40px;
-    height: 40px;
-    vertical-align: middle;
+    width: 35px;
+    height: 35px;
+    vertical-align: top;
     margin-right: 10px;
 }
 .blank {
