@@ -150,10 +150,10 @@ body {
         text-align: center;
 }
 .weixin_code {
-    /*padding: 100000px;
-    margin: -100000px;*/
-        margin-left: 29%;
-    margin-top: 80px;
+    padding: 100000px;
+    margin: -100000px;
+        /*margin-left: 29%;
+    margin-top: 80px;*/
 }
 title {
     color: #fff;
