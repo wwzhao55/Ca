@@ -32,6 +32,7 @@
     <div class="user-info" style="width: 290px"><label style="display: inline-block">邮箱</label><input id="in5" type='email' name='email'
                                                                                  style="width: 208px;margin-left: 20px;">
     </div>
+    <div class='hide-block'>
     <div class="title">1.贵企业现在有多少开发人员？</div>
     <div class='dropdown'>
         <button><span></span><span class='caret'></span></button>
@@ -54,34 +55,34 @@
     </div>
     <div class="title">3.在以下领域中，哪些是您接下来的6个月中最需要改善的？（可多选）</div>
     <div>
-        <div style="display: block"><input id="y1" class="check" type="checkbox" value=""
-                                           style="display: inline-block ;width: 20px;height: 20px"/><span
-                class="ttt">服务虚拟化管理</span>
+        <div style="display: block;position: relative;margin-bottom: 10px;"><input id="y1" class="check" type="checkbox" value=""
+                                           style="display: inline-block ;width: 20px;height: 20px"/><label for='y1'><span
+                class="ttt">服务虚拟化管理</span></label>
         </div>
-        <div style="display: block"><input id="y2" class="check" type="checkbox" value=""
-                                           style="display: inline-block ;width: 20px;height: 20px"/><span
-                class="ttt">API安全管理</span>
+        <div style="display: block;position: relative;margin-bottom: 10px;"><input id="y2" class="check" type="checkbox" value=""
+                                           style="display: inline-block ;width: 20px;height: 20px"/><label for='y2'><span
+                class="ttt">API安全管理</span></label>
         </div>
-        <div style="display: block"><input id="y3" class="check" type="checkbox" value=""
-                                           style="display: inline-block ;width: 20px;height: 20px"/><span
-                class="ttt">应用性能管理</span>
+        <div style="display: block;position: relative;margin-bottom: 10px;"><input id="y3" class="check" type="checkbox" value=""
+                                           style="display: inline-block ;width: 20px;height: 20px"/><label for='y3'><span
+                class="ttt">应用性能管理</span></label>
         </div>
-        <div style="display: block"><input id="y4" class="check" type="checkbox" value=""
-                                           style="display: inline-block ;width: 20px;height: 20px"/><span
-                class="ttt">发布自动化管理</span>
+        <div style="display: block;position: relative;margin-bottom: 10px;"><input id="y4" class="check" type="checkbox" value=""
+                                           style="display: inline-block ;width: 20px;height: 20px"/><label for='y4'><span
+                class="ttt">发布自动化管理</span></label>
         </div>
-        <div style="display: block"><input id="y5" class="check" type="checkbox" value=""
-                                           style="display: inline-block ;width: 20px;height: 20px"/><span
-                class="ttt">基础设施统一监控</span>
+        <div style="display: block;position: relative;margin-bottom: 10px;"><input id="y5" class="check" type="checkbox" value=""
+                                           style="display: inline-block ;width: 20px;height: 20px"/><label for='y5'><span
+                class="ttt">基础设施统一监控</span></label>
         </div>
-        <div style="display: block"><input id="y6" class="check" type="checkbox" value=""
-                                           style="display: inline-block ;width: 20px;height: 20px"/><span
-                class="ttt">移动应用分析</span>
+        <div style="display: block;position: relative;margin-bottom: 10px;"><input id="y6" class="check" type="checkbox" value=""
+                                           style="display: inline-block ;width: 20px;height: 20px"/><label for='y6'><span
+                class="ttt">移动应用分析</span></label>
         </div>
-        <div style="display: block"><input id="y7" class="check" type="checkbox" value=""
-                                           style="display: inline-block ;width: 20px;height: 20px"/><span
-                class="ttt">其他</span>
-            <input id="question_qita" type="text" style="display: inline-block ;width: 510px;">
+        <div style="display: block;position: relative;"><input id="y7" class="check" type="checkbox" value=""
+                                           style="display: inline-block ;width: 20px;height: 20px"/><label for='y7'><span
+                class="ttt">其他</span></label>
+            <input id="question_qita" type="text" style="display: inline-block ;width: 510px;vertical-align: top;">
         </div>
     </div>
     <div class="title">4.这个项目是否已经获得预算支持？</div>
@@ -115,9 +116,19 @@
             <li value="C">C.其他</li>
         </ul>
     </div>
+    </div>
     <div class='err_msg'></div>
     <button type='button' id='reg_submit'>确定</button>
 </form>
+<div class='err-container'>
+    <div class='err-content'>
+        <p>我们很重视您的反馈</p>
+        <p>请填写完整问卷
+    </div>
+</div>
+<div class='success-block'>
+    <p><img src='image/3@2x.png'>提交成功</p>
+    <p>凭此截屏在<span>CA Technologies</span>展位获得精美礼品一份</p>
 </div>
 <script type='text/javascript'>
     function trim(str) {
@@ -214,7 +225,10 @@
                     dataType: 'json',
                     success: function (result) {
                         if (result.status == 'success') {
-                            window.location.href = 'welcome.html';
+                            //window.location.href = 'welcome.html';
+                          //  var temp = "<div>"
+                            $('.hide-block').empty().append($('.success-block'));
+                            $('.hide-block .success-block').show();
                         } else {
                             alert("传输错误")
                             $('.err_msg').html('*' + result.msg);
@@ -227,14 +241,26 @@
 //                } else {
 //                    $('.err_msg').html('*' + check1);
 //                }
-                alert("请输入完整信息！")
+               // alert("请输入完整信息！")
+               $('.err-container').css({top:$('body').scrollTop()}).show();
+                document.body.style.overflow='hidden';
+                $('.err-container').one("click", function(){
+                    $(".err-container").hide();
+                    document.body.style.overflow='auto';
+                });
             }
         } else {
-            alert("请输入完整信息！")
-//            $('.err_msg').html('请填写完整信息！');
+               $('.err-container').css({top:$('body').scrollTop()}).show();
+                document.body.style.overflow='hidden';
+                $('.err-container').one("click", function(){
+                    $(".err-container").hide();
+                    document.body.style.overflow='auto';
+                });
         }
     })
-
+    $('.err-content').on('click',function(e){
+        e.stopPropagation();
+    })
     $('.dropdown button').on('click', function () {
         $(this).closest('.dropdown').siblings('.dropdown').children('ul').hide();
         $(this).siblings('ul').toggle();
