@@ -333,6 +333,9 @@ label {
     color:#333;
     font-family: 'AdobeSongStd-Light';
 }
+.err-content p:first-of-type{
+    margin-bottom: 10px;
+}
 .success-block{
     display: none;
     margin-top: 34px;
