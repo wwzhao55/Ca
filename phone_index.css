@@ -146,6 +146,7 @@ body {
     width: 100%;
     display: inline-block;
     margin-top: 20px;
+    font-family: 'AdobeSongStd-Light,CASans';
 }
 .weixin_code {
     padding: 100000px;
@@ -171,7 +172,7 @@ span.special_tip {
     margin: -1000px;*/
 }
 .download_title {
-    width: 200px;
+    width: 300px;
     padding: 30px 30px 20px 30px;
     display: inline-block;
     color: #333;
@@ -208,7 +209,7 @@ span.title_list {
     margin-top: 10px;
     font-size: 28px;
     color: #666;
-    width: 120px;
+    width: 200px;
     display: inline-block;
     margin-bottom: 40px;
 }
