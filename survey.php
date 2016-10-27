@@ -29,12 +29,13 @@
 	$question6=$_POST['question6'];
 	$question7=$_POST['question7'];
 	//验证
-	if($question1=='' || $question2=='' || $question3_1=='' || $question3_2=='' || $question3_3=='' || $question3_4=='' || $question3_5=='' || $question3_6=='' || $question3_7=='' || $question4=='' || $question5=='' || $question6=='' || $question7=='')
+	if($name=='' || $email=='' || $company=='' || $phone=='' || $job=='' || $question1=='' || $question2=='' || $question3_1=='' || $question3_2=='' || $question3_3=='' || $question3_4=='' || $question3_5=='' || $question3_6=='' || $question3_7=='' || $question4=='' || $question5=='' || $question6=='' || $question7=='')
 	{
 		echo json_encode(array('status'=>'error','msg'=>'please fill the form completely'));
 		exit;
 	}
-
+	if(streln($question3_7)!=1)
+		$question3_7=substr($question3_7,2);
 	// if(trim($name) && trim($email) && trim($company) && trim($phone) && trim($job) && trim($question1) && trim($question2) && trim($question4) && trim($question5) && trim($question6) && trim($question7)){
 		if(!preg_match("/^1[34578]{1}\d{9}$/",$phone)){  
 		    echo json_encode(array('status'=>'error','msg'=>'your format of phone is wrong'));
