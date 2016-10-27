@@ -18,7 +18,7 @@ body {
     background-color: #f5f5f5;
     margin: 0;
     padding: 0;
-   /* position: absolute;*/
+    position: absolute;
     overflow: hidden;
 }
 #download_container {
@@ -143,8 +143,8 @@ body {
     margin-top: 20px;
 }
 .weixin_code {
-    padding-top: 1000px;
-    margin-top: -1000px;
+    padding-bottom: 1000px;
+    margin-bottom: -1000px;
 }
 title {
     color: #fff;
