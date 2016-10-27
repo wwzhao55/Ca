@@ -143,8 +143,8 @@ body {
     margin-top: 20px;
 }
 .weixin_code {
-    padding: 1000px;
-    margin: -1000px;
+    padding-top: 1000px;
+    margin-top: -1000px;
 }
 title {
     color: #fff;
