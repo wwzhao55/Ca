@@ -81,8 +81,7 @@
         </div>
         <div style="display: block;position: relative;"><input id="y7" class="check" type="checkbox" value=""
                                            style="display: inline-block ;width: 20px;height: 20px"/><label for='y7'><span
-                class="ttt">其他</span></label>
-            <input id="question_qita" type="text" style="display: inline-block ;vertical-align: top;">
+                class="ttt">其他</span></label><input id="question_qita" type="text" style="display: inline-block ;vertical-align: top;">
         </div>
     </div>
     <div class="title">4.这个项目是否已经获得预算支持？</div>
@@ -209,6 +208,7 @@ document.addEventListener("touchmove",function(e){
             var check1 = checkEmail($("input[name='email']").val());
             var check2 = checkTel($("input[name='phone']").val());
             if (check1 === true && check2 === true && c != "0000000") {
+                var hasc7 = c7===0?c7:'';
                 var data = "name=" + name + "&job=" + job + "&company=" + company +
                         "&phone=" + phone + "&" +
                         "email=" + email + "&" +
@@ -220,7 +220,7 @@ document.addEventListener("touchmove",function(e){
                         "question3_4=" + c4 + "&" +
                         "question3_5=" + c5 + "&" +
                         "question3_6=" + c6 + "&" +
-                        "question3_7="+ c7===0?c7:''+question_qita + "&" +
+                        "question3_7="+ hasc7+question_qita + "&" +
                         "question4=" + four + "&" +
                         "question5=" + five + "&" +
                         "question6=" + six + "&" +

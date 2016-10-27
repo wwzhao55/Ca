@@ -61,7 +61,7 @@ textarea::-webkit-input-placeholder {
 }
 span.ttt {
     padding-left: 52px;
-    font-size: 26px;
+    font-size: 28px;
     color: #333333;
     display: inline-block;
     line-height: 32px;
@@ -96,7 +96,7 @@ span.ttt {
 }
 
 .title {
-    font-size: 28px;
+    font-size: 30px;
     margin: 0px;
     text-align: left;
     padding-bottom: 10px;
@@ -125,7 +125,7 @@ span.ttt {
 }
 
 label {
-    font-size: 28px;
+    font-size: 30px;
     color: #333333;
 }
 
@@ -267,9 +267,9 @@ label {
 .select_type li {
     cursor: pointer;
     color: #333;
-    font-size: 24px;
-    line-height: 24px;
-    height: 40px;
+    font-size: 28px;
+    line-height: 28px;
+    height: 44px;
     padding: 8px 20px;
 }
 
@@ -396,9 +396,9 @@ label {
     vertical-align: middle;
 }
 #question_qita{
-    width:567px;
-    width:calc(100% - 109px);
-    width:-webkit-calc(100% - 109px);
-    width:-moz-calc(100% - 109px);
+    width:564px;
+    width:calc(100% - 110px);
+    width:-webkit-calc(100% - 110px);
+    width:-moz-calc(100% - 110px);
 
 }
