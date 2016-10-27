@@ -282,8 +282,8 @@ label {
 
 .err_msg {
     padding-left: 20px;
-    background-color: #164460;
     font-size: 18px;
+    color:red;
 }
 
 .welcome-block {

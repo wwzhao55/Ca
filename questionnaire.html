@@ -208,7 +208,7 @@ document.addEventListener("touchmove",function(e){
             var c = c1 + c2 + c3 + c4 + c5 + c6 + c7;
             var check1 = checkEmail($("input[name='email']").val());
             var check2 = checkTel($("input[name='phone']").val());
-            if (check1 == true && check2 == true && c != "0000000") {
+            if (check1 === true && check2 === true && c != "0000000") {
                 var data = "name=" + name + "&job=" + job + "&company=" + company +
                         "&phone=" + phone + "&" +
                         "email=" + email + "&" +
@@ -245,12 +245,18 @@ document.addEventListener("touchmove",function(e){
                     }
                 })
             } else {
-//                if (check1 == true) {
-//                    $('.err_msg').html('*' + check2);
-//                } else {
-//                    $('.err_msg').html('*' + check1);
-//                }
-               // alert("请输入完整信息！")
+                if (check1 === true) {
+                    if(check2!==true){
+
+                        $('.err_msg').html('*' + check2);
+                        return;
+                    }
+                    
+                } else {
+                    $('.err_msg').html('*' + check1);
+                    return;
+               }
+
                $('.err-container').css({top:$('body').scrollTop()}).show();
                 document.body.style.overflow='hidden';
                 canScroll = 0;
