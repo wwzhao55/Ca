@@ -34,8 +34,13 @@
 		echo json_encode(array('status'=>'error','msg'=>'please fill the form completely'));
 		exit;
 	}
+
 	//if(strlen($question3_7)!=1)
 		//$question3_7=substr($question3_7,2);
+
+	// if(strlen($question3_7)!=1)
+	// 	$question3_7=substr($question3_7,1);
+
 	// if(trim($name) && trim($email) && trim($company) && trim($phone) && trim($job) && trim($question1) && trim($question2) && trim($question4) && trim($question5) && trim($question6) && trim($question7)){
 		if(!preg_match("/^1[34578]{1}\d{9}$/",$phone)){  
 		    echo json_encode(array('status'=>'error','msg'=>'your format of phone is wrong'));
