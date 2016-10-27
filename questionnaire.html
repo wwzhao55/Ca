@@ -232,8 +232,6 @@ document.addEventListener("touchmove",function(e){
                     dataType: 'json',
                     success: function (result) {
                         if (result.status == 'success') {
-                            //window.location.href = 'welcome.html';
-                          //  var temp = "<div>"
                             $('.hide-block').empty().append($('.success-block'));
                             $('.hide-block .success-block').show();
                         } else {
@@ -280,7 +278,7 @@ document.addEventListener("touchmove",function(e){
         }
     })
     $('.dropdown ul li').on('click', function () {
-        $(this).closest('ul').siblings('button').css('color', '#333');
+        $(this).closest('ul').siblings('button').css({'background-color': '#164460','color':'#fff'});
         $(this).siblings('li').removeClass('active');
         $(this).addClass('active');
         var text = $(this).html();
