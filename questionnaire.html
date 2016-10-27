@@ -74,7 +74,7 @@
         <div style="display: block"><input id="y7" class="check" type="checkbox" value=""
                                            style="display: inline-block ;width: 20px;height: 20px"/><span
                 class="ttt">其他</span>
-            <input type="text" style="display: inline-block ;width: 510px;">
+            <input id="question_qita"type="text" style="display: inline-block ;width: 510px;">
         </div>
     </div>
     <div class="title">4.这个项目是否已经获得预算支持？</div>
@@ -147,6 +147,7 @@
         var two = reg_form.two.value;
         var four = reg_form.four.value;
         var five = document.getElementById("five").value;
+        var question_qita = document.getElementById("question_qita").value;
         var six = reg_form.six.value;
         var seven = reg_form.seven.value;
         if (trim(name) && trim(job) && trim(email) && trim(company) && trim(phone) && trim(one) && trim(two)
@@ -176,7 +177,7 @@
             if (document.getElementById("y6").checked) {
                 c6 = 1;
             }
-            if (document.getElementById("y7").checked) {
+            if (question_qita.length>0||document.getElementById("y7").checked) {
                 c7 = 1;
             }
             var c = c1 + c2 + c3 + c4 + c5 + c6 + c7;
@@ -194,7 +195,7 @@
                         "question3_4=" + c4 + "&" +
                         "question3_5=" + c5 + "&" +
                         "question3_6=" + c6 + "&" +
-                        "question3_7=" + c7 + "&" +
+                        "question3_7=" + "*"+question_qita + "&" +
                         "question4=" + four + "&" +
                         "question5=" + five + "&" +
                         "question6=" + six + "&" +
