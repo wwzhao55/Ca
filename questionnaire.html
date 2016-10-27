@@ -132,6 +132,12 @@
 </div>
 <script type='text/javascript'>
 var canScroll = 1;
+document.addEventListener("touchmove",function(e){
+                    if(canScroll==0){
+                        e.preventDefault();
+                        e.stopPropagation();
+                    }
+                },false);
     function trim(str) {
         return str.replace(/(^\s*)|(\s*$)/g, "");
     }
@@ -245,12 +251,7 @@ var canScroll = 1;
                // alert("请输入完整信息！")
                $('.err-container').css({top:$('body').scrollTop()}).show();
                 document.body.style.overflow='hidden';
-                document.addEventListener("touchmove",function(e){
-                    if(canScroll==1){
-                        e.preventDefault();
-                        e.stopPropagation();
-                    }
-                },false);
+                canScroll = 0;
                 $('.err-container').one("click", function(){
                     $(".err-container").hide();
                     document.body.style.overflow='auto';
@@ -260,12 +261,7 @@ var canScroll = 1;
         } else {
                $('.err-container').css({top:$('body').scrollTop()}).show();
                 document.body.style.overflow='hidden';
-                document.addEventListener("touchmove",function(e){
-                    if(canScroll==1){
-                        e.preventDefault();
-                        e.stopPropagation();
-                    }
-                },false);
+                canScroll = 0;
                 $('.err-container').one("click", function(){
                     $(".err-container").hide();
                     document.body.style.overflow='auto';
