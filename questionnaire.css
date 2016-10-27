@@ -395,3 +395,10 @@ label {
 #reg_form input.check + label{
     vertical-align: middle;
 }
+#question_qita{
+    width:567px;
+    width:calc(100% - 109px);
+    width:-webkit-calc(100% - 109px);
+    width:-moz-calc(100% - 109px);
+
+}
