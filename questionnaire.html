@@ -155,9 +155,9 @@ document.addEventListener("touchmove",function(e){
     {
         var tel = reg_form.phone.value;
 
-        var objExp = new RegExp(/^[1\s][\d\s]{10}$/);
+        var objExp = new RegExp(/^1[34578]{1}\d{9}$/);
         if (objExp.test(tel) == false) {
-            return "手机号码无效";
+            return "电话号码无效";
         }
         else
             return true;
