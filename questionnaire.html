@@ -232,7 +232,7 @@ document.addEventListener("touchmove",function(e){
                     dataType: 'json',
                     success: function (result) {
                         if (result.status == 'success') {
-                            $('.err_msg')。hide();
+                            $('.err_msg').hide();
                             $('.hide-block').empty().append($('.success-block'));
                             $('.hide-block .success-block').show();
                             $("#reg_submit").unbind('click');
