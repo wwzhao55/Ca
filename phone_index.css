@@ -40,6 +40,7 @@ body {
     height: 320px;
     background-image: url('image/banner.png');
     background-size: cover;
+    margin-bottom: 80px;
 }
 .phone_banner_container {
     padding: 40px;
@@ -237,4 +238,9 @@ img.view {
     height: 40px;
     vertical-align: middle;
     margin-right: 10px;
+}
+.blank {
+    width: 29%;
+    float: left;
+    height: 291px;
 }
