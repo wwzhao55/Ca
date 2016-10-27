@@ -17,6 +17,7 @@
     <p align="center" style="position: relative;top: -125px;font-size: 30px;font-family: 'AdobeSongStd-Light'">CA Technologies有奖调查问卷</p>
 </div>
 <form method='post' onsubmit="return false" id='reg_form' name='reg_form'>
+ <div class='hide-block'>
     <div class="user-info" style=""><label style="display: inline-block">姓名</label><input id="in1" type='text' name='name'
                                                                                  style="width: 240px;margin-left: 20px;">
     </div>
@@ -32,7 +33,6 @@
     <div class="user-info" style=""><label style="display: inline-block">邮箱</label><input id="in5" type='email' name='email'
                                                                                  style="width: 240px;margin-left: 20px;">
     </div>
-    <div class='hide-block'>
     <div class="title">1.贵企业现在有多少开发人员？</div>
     <div class='dropdown'>
         <button><span></span><span class='caret'></span></button>
@@ -116,8 +116,8 @@
             <li value="C">C.其他</li>
         </ul>
     </div>
-    </div>
     <div class='err_msg'></div>
+    </div>
     <button type='button' id='reg_submit'>确定</button>
 </form>
 <div class='err-container'>
