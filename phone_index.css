@@ -1,7 +1,12 @@
 /*首页css*/
+@font-face { 
+font-family: CA Sans Regular;/*/×定义font的名字×/ */
+src: url('CA Sans-Regular.otf');/*把下载的字体文件引入进来×/ */
+}
 body {
     margin: 0;
     padding: 0;
+    font-family: 'CA Sans Regular';
 }
 #phone_container {
     width: 100%;
