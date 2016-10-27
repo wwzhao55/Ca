@@ -152,9 +152,9 @@ label {
 }
 
 #reg_form input, #reg_form select {
-    display: block;
+    display: inline-block;
     margin-bottom: 20px;
-    width: 100%;
+    /*width: 100%;*/
     font-size: 24px;
     padding-left: 20px;
     height: 60px;
