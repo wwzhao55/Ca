@@ -135,6 +135,7 @@ body {
     color: #666666;
     font-size: 24px;
     overflow: hidden;
+    padding-bottom: 80px;
 }
 .weixin_code_tip {
     width: 100%;
