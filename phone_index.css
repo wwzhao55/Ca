@@ -176,6 +176,7 @@ span.special_tip {
     display: inline-block;
     color: #333;
     font-size: 34px;
+    font-family: 'AdobeSongStd-Light';
 }
 .download_list {
     margin: 0 30px;
@@ -186,6 +187,7 @@ span.title_list {
     color: #123e33;
     width: 100%;
     display: inline-block;
+    font-family: 'Adobe 宋体 Std';
 } 
 .content_words {
     padding: 38px 40px;
@@ -193,6 +195,7 @@ span.title_list {
     display: inline-block;
     color: #fff;
     font-size: 28px;
+    font-family: 'AdobeSongStd-Light';
 }
 .content_list_1 {
     background-image: url('image/phone_index/background_1.png');
@@ -222,4 +225,10 @@ span.title_list {
     height: 284px;
     margin: 0;
     padding: 0;
+}
+img.view {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    margin-right: 10px;
 }
